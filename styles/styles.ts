@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
       width:"100%",
       padding:20,
       borderRadius:10,
-      backgroundColor:"white",
+      backgroundColor:"#40E0D0",
       elevation:5,
       marginTop:50,
     },
     profileName:{
-      color:"#9b59b6",
+      color:"#FF00FF",
       fontSize:20,
       fontWeight:"bold"
     }
