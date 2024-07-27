@@ -12,7 +12,7 @@ const ProfileScreen = (): React.JSX.Element => {
     setName(name == "Weerawat Phapukdee" ? "No Name" : "Weerawat Phapukdee");
   }
   const handChangeImage =()=> {
-    setImage(ProfileImage1)
+    setImage( image == ProfileImage1 ? ProfileImage: ProfileImage1)
   }
   return (
     <View style={styles.container}>
