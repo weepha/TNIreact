@@ -1,36 +1,24 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { styles2 } from '../styles/styles'
 
 type Contenttype={
-    title:string
-    year:number
+    fullname:string;
+    message:string;
 }
-const AppHeader = ({title,year}:Contenttype) => {
+const AppHeader = ({fullname,message}:Contenttype) => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.headerText}>{title}</Text>
-      
+    <View style={styles2.header}>
+      <Text style={styles2.headerText}>
+        Input your fullname: {fullname}
+      </Text>
+      <Text style={styles2.subtitleText}>
+        {message}
+      </Text>
     </View>
   )
 }
 
 export default AppHeader
 
-const styles = StyleSheet.create({
-    header: {
-    backgroundColor: '#AEC6CF',
-    padding: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    },
-    headerText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#fff',
-    },
-    subtitleText: {
-    fontSize: 16,
-    color: '#fff',
-    },
-    });
     
