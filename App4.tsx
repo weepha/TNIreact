@@ -11,7 +11,7 @@ import WeatherLondon from './components/WeatherLondon'
 import WeatherBangkok from './components/WeatherBangkok'
 import ModalExample from './components/ModalExample'
 // import WeatherApp from './components/WeatherApp'
-import AboutScreen from './Screens/AboutScreen'
+import AboutScreen from './screens/AboutScreen'
 const App = () => {
   return (
     <View>
