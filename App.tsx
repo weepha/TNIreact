@@ -17,6 +17,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeScreen from "./screens/HomeScreen";
 
+import DetailScreen from "./screens/DetailScreen";
 
 const HomeStack = createNativeStackNavigator();
 const ProductStack = createNativeStackNavigator();
@@ -60,6 +61,7 @@ function ProductStackScreen() {
         name="Products"
         component={ProductScreen}
       />
+      <ProductStack.Screen name="Detail"component={DetailScreen}/>
     </ProductStack.Navigator>
   );
 }
