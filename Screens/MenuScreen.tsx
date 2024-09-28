@@ -21,7 +21,7 @@ const MenuScreen = ({ navigation }: any): React.JSX.Element => {
       <>
         <ListItem 
           bottomDivider //เส้นขีดระหว่างเมนู
-          onPress={()=> {navigation.navigate('HomeStack')}} 
+          onPress={()=> {navigation.navigate('Home')}} 
         >
           <Icon name="home" type="material-community" color="grey" />
           <ListItem.Content>
