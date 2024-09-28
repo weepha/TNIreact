@@ -1,22 +1,20 @@
-// Only import react-native-gesture-handler on native platforms
 import "react-native-gesture-handler";
 
 import React, { useState } from "react";
 import { HeaderButtonsProvider } from "react-navigation-header-buttons";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
+import HomeScreen from "./screens/HomeScreen";
 import AboutScreen from "./screens/AboutScreen";
-
+import CreatePostScreen from "./screens/CreatePostScreen";
 import MenuScreen from "./screens/MenuScreen";
 import ProductScreen from "./screens/ProductScreen";
+import DetailScreen from "./screens/DetailScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import HomeScreen from "./screens/HomeScreen";
-
-import DetailScreen from "./screens/DetailScreen";
 import Toast from "react-native-toast-message";
 
 const HomeStack = createNativeStackNavigator();
@@ -59,24 +57,24 @@ function ProductStackScreen() {
       }}
     >
       <ProductStack.Screen name="Products" component={ProductScreen} />
-      <ProductStack.Screen name="Detail" component={DetailScreen} />
+      <ProductStack.Screen name="Details" component={DetailScreen} />
     </ProductStack.Navigator>
   );
 }
+
 function LoginStackScreen() {
   return (
     <LoginStack.Navigator
-      initialRouteName="Login"
+      initialRouteName="Products"
       screenOptions={{
         //Global
         headerTitleStyle: { fontWeight: "bold" },
       }}
     >
-      <LoginStack.Screen name="Login" component={LoginStackScreen} />
+      <LoginStack.Screen name="Login" component={LoginScreen} />
     </LoginStack.Navigator>
   );
 }
-
 const App = (): React.JSX.Element => {
   const [isLogin] = useState(false);
   return (
@@ -105,5 +103,4 @@ const App = (): React.JSX.Element => {
     </>
   );
 };
-
-export default App;
+export default App
